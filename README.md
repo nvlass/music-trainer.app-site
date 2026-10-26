@@ -42,3 +42,7 @@ sudo certbot --nginx -d music-trainer.app -d www.music-trainer.app
 Everything is served `no-cache` (the browser revalidates, so deploys show up at once) except the piano samples, which never change.
 
 Moving from the old subdomains: progress is stored per origin (IndexedDB), so it doesn't carry over to the new domain. Users can export stats from the old address (Chord Trainer has export/import).
+
+## License
+
+MIT, see [LICENSE](LICENSE).
