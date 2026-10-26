@@ -23,7 +23,9 @@ The apps use relative paths throughout, so they work under a path without change
 
 ## Deploy
 
-Front page:
+`./deploy.sh` rsyncs the front page and each app's committed `dist/` to the server (all of them, or the ones named: `./deploy.sh harmoneer front`). It expects the app repos next to this one and an ssh host called `server`; override with `SERVER=… WORK=…`. It refuses to deploy an app with uncommitted changes in `src/`, `resources/` or `dist/`.
+
+Front page by hand:
 
 ```sh
 rsync -a --delete --exclude '.git' --exclude 'nginx' --exclude 'README.md' ./ server:/var/www/html/music-trainer.app/
