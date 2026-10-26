@@ -5,6 +5,7 @@ Front page and nginx config for [music-trainer.app](https://music-trainer.app), 
 - [Chord Trainer](https://github.com/nvlass/chordtrainer) at `/chordtrainer/`
 - [Counterpointer](https://github.com/nvlass/counterpointer) at `/counterpointer/`
 - [Dicteeineer](https://github.com/nvlass/dicteeineer) at `/dicteeineer/`
+- [Harmoneer](https://github.com/nvlass/harmoneer) at `/harmoneer/`
 
 The front page is a single static `index.html` + `style.css` (English and Greek, picked from the browser language, with a toggle). No build step.
 
@@ -16,6 +17,7 @@ The front page is a single static `index.html` + `style.css` (English and Greek,
 | `/chordtrainer/` | `/var/www/html/megacorp1.eu/chordtrainer/` |
 | `/counterpointer/` | `/var/www/html/megacorp1.eu/counterpointer/` |
 | `/dicteeineer/` | `/var/www/html/megacorp1.eu/dicteeineer/` |
+| `/harmoneer/` | `/var/www/html/megacorp1.eu/harmoneer/` |
 
 The apps use relative paths throughout, so they work under a path without changes. Each one's service worker is scoped to its own folder.
 

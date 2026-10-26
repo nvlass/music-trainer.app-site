@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#17171c">
   <title>Music Trainer</title>
-  <meta name="description" content="Free ear-training and theory apps that run in your browser: chords, species counterpoint and melodic dictation. No download, no sign-up.">
+  <meta name="description" content="Free ear-training and theory apps that run in your browser: chords, species counterpoint, melodic dictation and four-part harmony. No download, no sign-up.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -21,7 +21,7 @@
 
     <section class="hero">
       <h1 data-i18n="title">Train your ear and your writing, right in the browser.</h1>
-      <p class="lead" data-i18n="lead">Three small apps for musicians and students: chords, counterpoint and dictation.</p>
+      <p class="lead" data-i18n="lead">Four small apps for musicians and students: chords, counterpoint, dictation and harmony.</p>
       <ul class="facts">
         <li data-i18n="free">Free</li>
         <li data-i18n="nodl">No download or sign-up</li>
@@ -69,6 +69,19 @@
           </div>
         </div>
       </article>
+
+      <article class="app">
+        <img src="img/harmoneer.svg" alt="" width="64" height="64">
+        <div class="body">
+          <h2>Harmoneer</h2>
+          <p data-i18n="harm-desc">Four-part harmony, first year: write soprano, alto and tenor over a figured bass, or harmonize a melody. Primary degrees, inversions, VI and II, cadences, III and VII, with the rules checked as you write, hints and a model solution.</p>
+          <p class="meta" data-i18n="lang-both">English and Greek · MIDI keyboard supported</p>
+          <div class="links">
+            <a class="open" href="/harmoneer/" data-i18n="open">Open</a>
+            <a class="src" href="https://github.com/nvlass/harmoneer" data-i18n="source">Source on GitHub</a>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section class="notes">
@@ -87,7 +100,7 @@
   <script>
     const el = {
       title: 'Εξασκήστε το αυτί και τη γραφή σας, μέσα στον browser.',
-      lead: 'Τρεις μικρές εφαρμογές για μουσικούς και σπουδαστές: συγχορδίες, αντίστιξη και ντικτέ.',
+      lead: 'Τέσσερις μικρές εφαρμογές για μουσικούς και σπουδαστές: συγχορδίες, αντίστιξη, ντικτέ και αρμονία.',
       free: 'Δωρεάν',
       nodl: 'Χωρίς εγκατάσταση ή εγγραφή',
       browser: 'Τρέχουν στον browser, σε κινητό ή υπολογιστή',
@@ -95,6 +108,7 @@
       'chord-desc': 'Ακούστε και αναγνωρίστε συγχορδίες πέρα από τις απλές τρίφωνες: 7ες, sus και add, επεκτάσεις και αλλοιωμένες δεσπόζουσες, με αναστροφές. Λειτουργίες γρίφου, εξάσκησης και «φαντάσου», καθώς και σημειωματάριο αρμονικών διαδοχών όπως Em9 | A13 | Cmaj7#11.',
       'cp-desc': 'Αντίστιξη κατά είδη, πρώτο και δεύτερο είδος. Γράψτε πάνω σε cantus firmus (ή σε έναν του Fux) και δείτε ποιους κανόνες παραβιάζει κάθε νότα, με υποδείξεις, διορθώσεις και σύνοψη θεωρίας. Αυστηροί (Fux) ή χαλαροί κανόνες, σε όλους τους εκκλησιαστικούς τρόπους.',
       'dict-desc': 'Αναγνώριση φθόγγων και μελωδικό ντικτέ. Βρείτε μεμονωμένους φθόγγους στο πληκτρολόγιο, με ή χωρίς φθόγγο αναφοράς, ή γράψτε μελωδίες μέτρο προς μέτρο σε οποιαδήποτε τονικότητα, σε κλειδί Σολ, Φα ή διπλό πεντάγραμμο, προαιρετικά με χρωματικούς φθόγγους.',
+      'harm-desc': 'Τετράφωνη αρμονία, πρώτο έτος: γράψτε σοπράνο, άλτο και τενόρο πάνω από αριθμημένο βάσιμο, ή εναρμονίστε μια μελωδία. Κύριες βαθμίδες, αναστροφές, VI και II, πτώσεις, III και VII, με έλεγχο κανόνων κατά τη γραφή, βοήθεια και υπόδειγμα λύσης.',
       'lang-en': 'Αγγλικά · υποστηρίζει πληκτρολόγιο MIDI',
       'lang-both': 'Ελληνικά και αγγλικά · υποστηρίζει πληκτρολόγιο MIDI',
       open: 'Άνοιγμα',
