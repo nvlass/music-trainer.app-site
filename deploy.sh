@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 # Deploys the front page and each app's committed dist/ to the server.
 # Usage: ./deploy.sh [front|chordtrainer|counterpointer|dicteeineer|harmoneer|theoricalizer ...]   (default: all)
-# SERVER (ssh host) and WORK (folder holding the app repos) can be overridden from the environment.
+# SERVER (user@host), PORT (ssh port) and WORK (folder holding the app repos) come from the environment
+# or from deploy.env next to this script (gitignored).
 set -euo pipefail
 
+[ -f "$(dirname "$0")/deploy.env" ] && . "$(dirname "$0")/deploy.env"
 SERVER=${SERVER:-server}
+PORT=${PORT:-22}
 WORK=${WORK:-$(cd "$(dirname "$0")/.." && pwd)}
 APPS_ROOT=/var/www/html/megacorp1.eu
 FRONT_ROOT=/var/www/html/music-trainer.app
@@ -23,7 +26,7 @@ targets=("$@")
 for t in "${targets[@]}"; do
   if [ "$t" = front ]; then
     echo "== front page"
-    rsync -a --delete --exclude '.git' --exclude 'nginx' --exclude 'README.md' --exclude 'deploy.sh' \
+    rsync -a --delete -e "ssh -p $PORT" --exclude '.git*' --exclude 'nginx' --exclude 'README.md' --exclude 'deploy.*' \
       "$WORK/music-trainer/" "$SERVER:$FRONT_ROOT/"
     continue
   fi
@@ -35,5 +38,5 @@ for t in "${targets[@]}"; do
     echo "   uncommitted changes in $repo; run npm run dist and commit first" >&2
     exit 1
   fi
-  rsync -a --delete "$dir/dist/" "$SERVER:$APPS_ROOT/$t/"
+  rsync -a --delete -e "ssh -p $PORT" "$dir/dist/" "$SERVER:$APPS_ROOT/$t/"
 done
