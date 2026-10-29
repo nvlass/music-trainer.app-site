@@ -1,7 +1,8 @@
 # music-trainer.app
 
-Front page and nginx config for [music-trainer.app](https://music-trainer.app), which hosts three free, browser-based apps:
+Front page and nginx config for [music-trainer.app](https://music-trainer.app), which hosts free, browser-based apps:
 
+- [Theoricalizer](https://github.com/nvlass/theoricalizer) at `/theoricalizer/`
 - [Chord Trainer](https://github.com/nvlass/chordtrainer) at `/chordtrainer/`
 - [Counterpointer](https://github.com/nvlass/counterpointer) at `/counterpointer/`
 - [Dicteeineer](https://github.com/nvlass/dicteeineer) at `/dicteeineer/`
@@ -18,6 +19,7 @@ The front page is a single static `index.html` + `style.css` (English and Greek,
 | `/counterpointer/` | `/var/www/html/megacorp1.eu/counterpointer/` |
 | `/dicteeineer/` | `/var/www/html/megacorp1.eu/dicteeineer/` |
 | `/harmoneer/` | `/var/www/html/megacorp1.eu/harmoneer/` |
+| `/theoricalizer/` | `/var/www/html/megacorp1.eu/theoricalizer/` |
 
 The apps use relative paths throughout, so they work under a path without changes. Each one's service worker is scoped to its own folder.
 

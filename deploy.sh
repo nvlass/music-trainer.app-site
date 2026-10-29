@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Deploys the front page and each app's committed dist/ to the server.
-# Usage: ./deploy.sh [front|chordtrainer|counterpointer|dicteeineer|harmoneer ...]   (default: all)
+# Usage: ./deploy.sh [front|chordtrainer|counterpointer|dicteeineer|harmoneer|theoricalizer ...]   (default: all)
 # SERVER (ssh host) and WORK (folder holding the app repos) can be overridden from the environment.
 set -euo pipefail
 
@@ -12,13 +12,13 @@ FRONT_ROOT=/var/www/html/music-trainer.app
 # url path -> local repo folder (macOS bash 3.2 has no associative arrays)
 repo_of() {
   case $1 in
-    chordtrainer|counterpointer|harmoneer) echo "$1" ;;
+    chordtrainer|counterpointer|harmoneer|theoricalizer) echo "$1" ;;
     dicteeineer) echo dicteeiner ;;
   esac
 }
 
 targets=("$@")
-[ ${#targets[@]} -eq 0 ] && targets=(front chordtrainer counterpointer dicteeineer harmoneer)
+[ ${#targets[@]} -eq 0 ] && targets=(front chordtrainer counterpointer dicteeineer harmoneer theoricalizer)
 
 for t in "${targets[@]}"; do
   if [ "$t" = front ]; then

@@ -21,7 +21,7 @@
 
     <section class="hero">
       <h1 data-i18n="title">Train your ear and your writing, right in the browser.</h1>
-      <p class="lead" data-i18n="lead">Four small apps for musicians and students: chords, counterpoint, dictation and harmony.</p>
+      <p class="lead" data-i18n="lead">Five small apps for musicians and students: theory, chords, counterpoint, dictation and harmony.</p>
       <ul class="facts">
         <li data-i18n="free">Free</li>
         <li data-i18n="nodl">No download or sign-up</li>
@@ -32,11 +32,24 @@
 
     <section class="apps">
       <article class="app">
+        <img src="img/theoricalizer.svg" alt="" width="64" height="64">
+        <div class="body">
+          <h2>Theoricalizer</h2>
+          <p data-i18n="theory-desc">Basic theory: intervals, scales and triads, each with a theory page and exercises on the staff. Name and write intervals, major and minor scales (natural, harmonic, melodic) and triads, and find the keys an interval or a triad belongs to.</p>
+          <p class="meta" data-i18n="lang-both-nomidi">English and Greek</p>
+          <div class="links">
+            <a class="open" href="/theoricalizer/" data-i18n="open">Open</a>
+            <a class="src" href="https://github.com/nvlass/theoricalizer" data-i18n="source">Source on GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="app">
         <img src="img/chordtrainer.svg" alt="" width="64" height="64">
         <div class="body">
           <h2>Chord Trainer</h2>
           <p data-i18n="chord-desc">Hear and name chords beyond plain triads: 7ths, sus and add chords, extensions and altered dominants, with inversions. Puzzle, training and “imagine” modes, plus a progression sketchpad to loop ideas like Em9 | A13 | Cmaj7#11.</p>
-          <p class="meta" data-i18n="lang-en">English · MIDI keyboard supported</p>
+          <p class="meta" data-i18n="lang-both">English and Greek · MIDI keyboard supported</p>
           <div class="links">
             <a class="open" href="/chordtrainer/" data-i18n="open">Open</a>
             <a class="src" href="https://github.com/nvlass/chordtrainer" data-i18n="source">Source on GitHub</a>
@@ -100,17 +113,19 @@
   <script>
     const el = {
       title: 'Εξασκήστε το αυτί και τη γραφή σας, μέσα στον browser.',
-      lead: 'Τέσσερις μικρές εφαρμογές για μουσικούς και σπουδαστές: συγχορδίες, αντίστιξη, ντικτέ και αρμονία.',
+      lead: 'Πέντε μικρές εφαρμογές για μουσικούς και σπουδαστές: θεωρία, συγχορδίες, αντίστιξη, ντικτέ και αρμονία.',
       free: 'Δωρεάν',
       nodl: 'Χωρίς εγκατάσταση ή εγγραφή',
       browser: 'Τρέχουν στον browser, σε κινητό ή υπολογιστή',
       offline: 'Λειτουργούν και χωρίς σύνδεση μετά την πρώτη επίσκεψη',
+      'theory-desc': 'Βασική θεωρία: διαστήματα, κλίμακες και τρίφωνες συγχορδίες, το καθένα με σελίδα θεωρίας και ασκήσεις στο πεντάγραμμο. Αναγνωρίστε και γράψτε διαστήματα, μείζονες και ελάσσονες κλίμακες (φυσική, αρμονική, μελωδική) και συγχορδίες, και βρείτε σε ποιες κλίμακες ανήκει ένα διάστημα ή μια συγχορδία.',
       'chord-desc': 'Ακούστε και αναγνωρίστε συγχορδίες πέρα από τις απλές τρίφωνες: 7ες, sus και add, επεκτάσεις και αλλοιωμένες δεσπόζουσες, με αναστροφές. Λειτουργίες γρίφου, εξάσκησης και «φαντάσου», καθώς και σημειωματάριο αρμονικών διαδοχών όπως Em9 | A13 | Cmaj7#11.',
       'cp-desc': 'Αντίστιξη κατά είδη, πρώτο και δεύτερο είδος. Γράψτε πάνω σε cantus firmus (ή σε έναν του Fux) και δείτε ποιους κανόνες παραβιάζει κάθε νότα, με υποδείξεις, διορθώσεις και σύνοψη θεωρίας. Αυστηροί (Fux) ή χαλαροί κανόνες, σε όλους τους εκκλησιαστικούς τρόπους.',
       'dict-desc': 'Αναγνώριση φθόγγων και μελωδικό ντικτέ. Βρείτε μεμονωμένους φθόγγους στο πληκτρολόγιο, με ή χωρίς φθόγγο αναφοράς, ή γράψτε μελωδίες μέτρο προς μέτρο σε οποιαδήποτε τονικότητα, σε κλειδί Σολ, Φα ή διπλό πεντάγραμμο, προαιρετικά με χρωματικούς φθόγγους.',
       'harm-desc': 'Τετράφωνη αρμονία, πρώτο έτος: γράψτε σοπράνο, άλτο και τενόρο πάνω από αριθμημένο βάσιμο, ή εναρμονίστε μια μελωδία. Κύριες βαθμίδες, αναστροφές, VI και II, πτώσεις, III και VII, με έλεγχο κανόνων κατά τη γραφή, βοήθεια και υπόδειγμα λύσης.',
       'lang-en': 'Αγγλικά · υποστηρίζει πληκτρολόγιο MIDI',
       'lang-both': 'Ελληνικά και αγγλικά · υποστηρίζει πληκτρολόγιο MIDI',
+      'lang-both-nomidi': 'Ελληνικά και αγγλικά',
       open: 'Άνοιγμα',
       source: 'Κώδικας στο GitHub',
       how: 'Πώς λειτουργεί',
